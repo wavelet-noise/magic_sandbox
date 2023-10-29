@@ -1,0 +1,14 @@
+{
+  "name": "magic_sandbox_lib",
+  "version": "0.1.0",
+  "files": [
+    "magic_sandbox_lib_bg.wasm",
+    "magic_sandbox_lib.js",
+    "magic_sandbox_lib.d.ts"
+  ],
+  "module": "magic_sandbox_lib.js",
+  "types": "magic_sandbox_lib.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
