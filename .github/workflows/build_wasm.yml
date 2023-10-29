@@ -19,22 +19,22 @@ jobs:
     - name: Install dependencies
       run: sudo apt-get update && sudo apt-get install -y liblua5.3-dev pkg-config build-essential libc6-dev
     - name: Build 🛠
-      run: wasm-pack build --release --target web sand_evolution_lib
+      run: wasm-pack build --release --target web magic_sandbox_lib
     - name: Archive 💼
       run: |
         echo "- builed files -"
-        ls -f sand_evolution_lib/pkg
+        ls -f magic_sandbox_lib/pkg
         echo "----------------"
         mkdir dest
-        mkdir dest/sand_evolution_lib
-        cp -r sand_evolution_lib/pkg dest/sand_evolution_lib
+        mkdir dest/magic_sandbox_lib
+        cp -r magic_sandbox_lib/pkg dest/magic_sandbox_lib
         echo "-  clone main  -"
-        git clone https://github.com/wavelet-noise/sand_evolution.git repo
+        git clone https://github.com/wavelet-noise/magic_sandbox.git repo
         ls -f repo
         echo "----------------"
         cp repo/index.html dest/index.html
         cp repo/favicon.ico dest/favicon.ico
-        rm -f dest/sand_evolution_lib/pkg/.gitignore
+        rm -f dest/magic_sandbox_lib/pkg/.gitignore
         echo "---  result  ---"
         ls -fR dest
     - name: Deploy 🚀
