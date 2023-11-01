@@ -34,6 +34,7 @@ jobs:
         echo "----------------"
         cp repo/index.html dest/index.html
         cp repo/favicon.ico dest/favicon.ico
+        cp -r repo/assets dest/assets
         rm -f dest/magic_sandbox_lib/pkg/.gitignore
         echo "---  result  ---"
         ls -fR dest
